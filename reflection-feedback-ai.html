@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BriefFlow Reflection, Feedback & AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-frame">
+      <div class="phone-glow"></div>
+      <section class="mobile-screen app-page">
+        <header class="topbar card">
+          <a class="brand-link" href="calendar-brief-tracking.html"><p class="mini-logo">BriefFlow</p></a>
+          <nav class="nav-actions" aria-label="Primary navigation">
+            <a class="nav-link" href="calendar-brief-tracking.html"><span class="icon-line" data-icon="calendar" aria-hidden="true"></span><span class="sr-only">Calendar</span></a>
+            <a class="nav-link" href="creative-canvas.html"><span class="icon-line" data-icon="palette" aria-hidden="true"></span><span class="sr-only">Creative Canvas</span></a>
+            <a class="nav-link active" href="reflection-feedback-ai.html" aria-current="page"><span class="icon-line" data-icon="chat" aria-hidden="true"></span><span class="sr-only">Reflection and AI</span></a>
+            <a class="nav-link" href="process-output.html"><span class="icon-line" data-icon="export" aria-hidden="true"></span><span class="sr-only">Process Output</span></a>
+          </nav>
+        </header>
+
+        <div class="screen-content">
+          <div class="section-header">
+            <p class="eyebrow">Reflection loop</p>
+            <h2>Reflection &amp; AI</h2>
+          </div>
+
+          <section class="gibbs-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Gibbs cycle</p>
+                <h3>Project reflection</h3>
+              </div>
+            </div>
+
+            <div class="gibbs-grid">
+              <article class="gibbs-box">
+                <h4>Description</h4>
+                <p>Mapped the brief and gathered visual references across multiple moods.</p>
+              </article>
+              <article class="gibbs-box">
+                <h4>Feelings</h4>
+                <p>Excited by the direction, but still second-guessing what to commit to.</p>
+              </article>
+              <article class="gibbs-box">
+                <h4>Evaluation</h4>
+                <p>Research feels rich, yet the brief still needs one sharper visual thesis.</p>
+              </article>
+              <article class="gibbs-box">
+                <h4>Conclusion</h4>
+                <p>Time-box concept selection before gathering any more inspiration.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="feedback-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Peers</p>
+                <h3>Feedback Circle</h3>
+              </div>
+              <span class="pill" id="peer-count">0 peers</span>
+            </div>
+
+            <div class="peer-card-shell">
+              <div class="peer-list" id="peer-list"></div>
+
+              <form class="peer-add-form" id="peer-add-form">
+                <input class="auth-input" id="peer-name" name="peerName" type="text" placeholder="Add peer name">
+                <button class="ghost-button" type="submit">Add Peer</button>
+              </form>
+
+              <div class="peer-thread" id="peer-thread"></div>
+              <p class="peer-status" id="peer-status" aria-live="polite">Pick a peer and send a note for critique or direction checks.</p>
+
+              <form class="peer-message-form" id="peer-message-form">
+                <textarea id="peer-message" placeholder="Ask for feedback on layout, concept, pacing, or presentation..."></textarea>
+                <button class="primary-button small" type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+
+          <section class="support-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Support</p>
+                <h3><span class="icon-line icon-inline" data-icon="chat" aria-hidden="true"></span>AI Chat</h3>
+              </div>
+            </div>
+
+            <form id="ai-form" class="peer-message-form">
+              <label class="sr-only" for="ai-input">AI prompt</label>
+              <textarea id="ai-input" placeholder="Ask anything... thinking out loud"></textarea>
+              <p class="peer-status" id="ai-status" aria-live="polite">Use AI for reflection prompts, critique framing, and getting unstuck.</p>
+              <div class="auth-row">
+                <p>Voice input: Settings -> Always On</p>
+                <button class="primary-button small" type="submit">Send</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
