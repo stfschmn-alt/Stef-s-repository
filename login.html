@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BriefFlow Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-frame">
+      <div class="phone-glow"></div>
+      <section class="mobile-screen auth-screen">
+        <form class="login-card card" id="auth-form" data-auth-redirect="calendar-brief-tracking.html">
+          <p class="logo-mark">BriefFlow</p>
+          <h1>BriefFlow</h1>
+          <p class="tagline">Non-linear brief planner</p>
+
+          <div class="auth-switch" role="tablist" aria-label="Authentication mode">
+            <button class="auth-tab active" type="button" data-auth-mode="signin" aria-selected="true">Sign In</button>
+            <button class="auth-tab" type="button" data-auth-mode="signup" aria-selected="false">Create Account</button>
+          </div>
+
+          <div class="auth-fields">
+            <label class="field-label signup-only hidden" for="auth-name">Name</label>
+            <input class="auth-input signup-only hidden" id="auth-name" name="name" type="text" placeholder="Your name" autocomplete="name">
+
+            <label class="field-label" for="auth-email">Email</label>
+            <input class="auth-input" id="auth-email" name="email" type="email" placeholder="studio@student.edu" autocomplete="email" value="email@test" required>
+
+            <label class="field-label" for="auth-password">Password</label>
+            <input class="auth-input" id="auth-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" value="passwordstest" required>
+
+            <label class="field-label signup-only hidden" for="auth-confirm">Confirm Password</label>
+            <input class="auth-input signup-only hidden" id="auth-confirm" name="confirmPassword" type="password" placeholder="Confirm password" autocomplete="new-password">
+          </div>
+
+          <div class="auth-row">
+            <label class="checkbox-row">
+              <input type="checkbox" id="remember-session" checked>
+              <span>Keep me signed in</span>
+            </label>
+            <button class="text-button" type="button">Forgot?</button>
+          </div>
+
+          <p class="auth-status" id="auth-status" aria-live="polite">Demo sign-in is prefilled with email@test and passwordstest.</p>
+          <button class="primary-button enter-button" type="submit" data-action="enter-app">Sign In</button>
+
+          <div class="prototype-links">
+            <a href="calendar-brief-tracking.html">Skip to Calendar</a>
+            <a href="creative-canvas.html">Creative Canvas</a>
+            <a href="reflection-feedback-ai.html">Reflection &amp; AI</a>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
