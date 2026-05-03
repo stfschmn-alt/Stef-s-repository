@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BriefFlow Process Output</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-frame">
+      <div class="phone-glow"></div>
+      <section class="mobile-screen app-page">
+        <header class="topbar card">
+          <a class="brand-link" href="calendar-brief-tracking.html"><p class="mini-logo">BriefFlow</p></a>
+          <nav class="nav-actions" aria-label="Primary navigation">
+            <a class="nav-link" href="calendar-brief-tracking.html"><span class="icon-line" data-icon="calendar" aria-hidden="true"></span><span class="sr-only">Calendar</span></a>
+            <a class="nav-link" href="creative-canvas.html"><span class="icon-line" data-icon="palette" aria-hidden="true"></span><span class="sr-only">Creative Canvas</span></a>
+            <a class="nav-link" href="reflection-feedback-ai.html"><span class="icon-line" data-icon="chat" aria-hidden="true"></span><span class="sr-only">Reflection and AI</span></a>
+            <a class="nav-link active" href="process-output.html" aria-current="page"><span class="icon-line" data-icon="export" aria-hidden="true"></span><span class="sr-only">Process Output</span></a>
+          </nav>
+        </header>
+
+        <div class="screen-content">
+          <div class="section-header">
+            <p class="eyebrow">Output bundle</p>
+            <h2>Process Output</h2>
+          </div>
+
+          <section class="export-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Export</p>
+                <h3>Presentation Pack</h3>
+              </div>
+            </div>
+
+            <p>Collect the strongest pieces of the brief journey into a shareable PDF, critique pack, and workflow summary.</p>
+            <div class="export-actions">
+              <button class="primary-button" id="generate-output" type="button">Generate PDF</button>
+              <a class="ghost-button" href="reflection-feedback-ai.html">Review Notes</a>
+            </div>
+            <p class="export-status" id="process-status" aria-live="polite">Export actions are ready for your process documentation flow.</p>
+          </section>
+
+          <section class="timers-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Phase timers</p>
+                <h3>Execution Windows</h3>
+              </div>
+            </div>
+
+            <div class="timer-strip" aria-label="Phase timers">
+              <button class="timer-card card" type="button" data-phase="Research">
+                <div class="timer-circle blue"><span>2h</span></div>
+                <h4>Research</h4>
+                <p>2h 15m</p>
+              </button>
+              <button class="timer-card card" type="button" data-phase="Ideation">
+                <div class="timer-circle orange"><span>45m</span></div>
+                <h4>Ideation</h4>
+                <p>45m</p>
+              </button>
+              <button class="timer-card card" type="button" data-phase="Design">
+                <div class="timer-circle blue"><span>1.5h</span></div>
+                <h4>Design</h4>
+                <p>1h 30m</p>
+              </button>
+              <button class="timer-card card" type="button" data-phase="Review">
+                <div class="timer-circle orange"><span>20m</span></div>
+                <h4>Review</h4>
+                <p>20m</p>
+              </button>
+            </div>
+          </section>
+
+          <section class="board-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Workflow board</p>
+                <h3>Process Snapshot</h3>
+              </div>
+            </div>
+
+            <div class="kanban-board" id="kanban-board">
+              <div class="kanban-column" data-column="research">
+                <div class="column-header"><span class="icon-line icon-inline" data-icon="stack" aria-hidden="true"></span><h4>Research</h4></div>
+                <button class="kanban-card" draggable="true">Gather references</button>
+                <button class="kanban-card" draggable="true">Music mood samples</button>
+              </div>
+              <div class="kanban-column" data-column="ideation">
+                <div class="column-header"><span class="icon-line icon-inline" data-icon="spark" aria-hidden="true"></span><h4>Ideation</h4></div>
+                <button class="kanban-card" draggable="true">Initial concepts</button>
+              </div>
+              <div class="kanban-column" data-column="design">
+                <div class="column-header"><span class="icon-line icon-inline" data-icon="pen" aria-hidden="true"></span><h4>Design</h4></div>
+                <button class="kanban-card" draggable="true">Visual mockups</button>
+              </div>
+              <div class="kanban-column" data-column="complete">
+                <div class="column-header"><span class="icon-line icon-inline" data-icon="check-circle" aria-hidden="true"></span><h4>Complete</h4></div>
+                <button class="kanban-card" draggable="true">Final deliverable</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="export-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Bundles</p>
+                <h3>Output Options</h3>
+              </div>
+            </div>
+
+            <div class="export-bundles">
+              <article class="bundle-card">
+                <h4>Process Log</h4>
+                <p>Timeline, timers, and board snapshots for process documentation.</p>
+              </article>
+              <article class="bundle-card">
+                <h4>Critique Pack</h4>
+                <p>Reflection notes, peer feedback, and AI prompts for presentation prep.</p>
+              </article>
+              <article class="bundle-card">
+                <h4>Research Archive</h4>
+                <p>Canvas groups, linked references, and file placeholders from the creative board.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
