@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BriefFlow Calendar & Brief Tracking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-frame">
+      <div class="phone-glow"></div>
+      <section class="mobile-screen app-page">
+        <header class="topbar card">
+          <a class="brand-link" href="calendar-brief-tracking.html"><p class="mini-logo">BriefFlow</p></a>
+          <nav class="nav-actions" aria-label="Primary navigation">
+            <a class="nav-link active" href="calendar-brief-tracking.html" aria-current="page"><span class="icon-line" data-icon="calendar" aria-hidden="true"></span><span class="sr-only">Calendar</span></a>
+            <a class="nav-link" href="creative-canvas.html"><span class="icon-line" data-icon="palette" aria-hidden="true"></span><span class="sr-only">Creative Canvas</span></a>
+            <a class="nav-link" href="reflection-feedback-ai.html"><span class="icon-line" data-icon="chat" aria-hidden="true"></span><span class="sr-only">Reflection and AI</span></a>
+            <a class="nav-link" href="process-output.html"><span class="icon-line" data-icon="export" aria-hidden="true"></span><span class="sr-only">Process Output</span></a>
+          </nav>
+        </header>
+
+        <div class="screen-content">
+          <div class="section-header">
+            <p class="eyebrow">Monthly view</p>
+            <h2>October Calendar</h2>
+          </div>
+
+          <section class="calendar-card card">
+            <div class="weekday-row">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+          </section>
+
+          <section class="add-work-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Quick capture</p>
+                <h3>Add Brief or Project</h3>
+              </div>
+              <span class="pill">Dashboard</span>
+            </div>
+
+            <form id="brief-form" class="brief-form">
+              <div class="segmented-control" role="tablist" aria-label="Work type">
+                <button class="segment active" type="button" data-work-type="project" aria-selected="true">Project</button>
+                <button class="segment" type="button" data-work-type="brief" aria-selected="false">Brief</button>
+              </div>
+
+              <div class="brief-form-grid">
+                <label class="field-label" for="brief-title">Title</label>
+                <input class="auth-input" id="brief-title" name="title" type="text" placeholder="Packaging concept sprint" required>
+
+                <label class="field-label" for="brief-date">Due date</label>
+                <input class="auth-input" id="brief-date" name="dueDate" type="date" required>
+
+                <label class="field-label" for="brief-progress">Progress</label>
+                <input class="auth-input" id="brief-progress" name="progress" type="number" min="0" max="100" placeholder="25">
+              </div>
+
+              <p class="brief-status" id="brief-status" aria-live="polite">Add a brief or project to pin it to your October flow.</p>
+              <button class="primary-button small add-brief-button" type="submit">Add to Dashboard</button>
+            </form>
+          </section>
+
+          <section class="active-briefs-card card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">In motion</p>
+                <h3>Active Work</h3>
+              </div>
+              <span class="pill" id="brief-count">0 items</span>
+            </div>
+            <div id="brief-list"></div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
