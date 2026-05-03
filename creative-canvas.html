@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BriefFlow Creative Canvas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="phone-frame">
+      <div class="phone-glow"></div>
+      <section class="mobile-screen app-page">
+        <header class="topbar card">
+          <a class="brand-link" href="calendar-brief-tracking.html"><p class="mini-logo">BriefFlow</p></a>
+          <nav class="nav-actions" aria-label="Primary navigation">
+            <a class="nav-link" href="calendar-brief-tracking.html"><span class="icon-line" data-icon="calendar" aria-hidden="true"></span><span class="sr-only">Calendar</span></a>
+            <a class="nav-link active" href="creative-canvas.html" aria-current="page"><span class="icon-line" data-icon="palette" aria-hidden="true"></span><span class="sr-only">Creative Canvas</span></a>
+            <a class="nav-link" href="reflection-feedback-ai.html"><span class="icon-line" data-icon="chat" aria-hidden="true"></span><span class="sr-only">Reflection and AI</span></a>
+            <a class="nav-link" href="process-output.html"><span class="icon-line" data-icon="export" aria-hidden="true"></span><span class="sr-only">Process Output</span></a>
+          </nav>
+        </header>
+
+        <div class="screen-content">
+          <div class="section-header">
+            <p class="eyebrow">Research field</p>
+            <h2>Creative Canvas</h2>
+          </div>
+
+          <section class="canvas-panel card">
+            <div class="canvas-toolbar">
+              <span>Pinch or wheel to zoom</span>
+              <button class="ghost-button" type="button" data-action="reset-zoom">Reset</button>
+            </div>
+
+            <section class="canvas-library">
+              <div class="section-header compact">
+                <div>
+                  <p class="eyebrow">Capture board</p>
+                  <h3>Groups &amp; Resources</h3>
+                </div>
+                <span class="pill" id="canvas-item-count">0 items</span>
+              </div>
+
+              <div class="group-chip-list" id="canvas-group-list"></div>
+
+              <form class="canvas-form compact-form" id="group-form">
+                <div class="brief-form-grid">
+                  <label class="field-label" for="group-name">New group</label>
+                  <input class="auth-input" id="group-name" name="groupName" type="text" placeholder="Moodboard">
+
+                  <label class="field-label" for="group-color">Color</label>
+                  <input class="color-input" id="group-color" name="groupColor" type="color" value="#4facfe">
+                </div>
+                <button class="ghost-button" type="submit">Add Group</button>
+              </form>
+
+              <form class="canvas-form" id="canvas-item-form">
+                <div class="type-grid" role="tablist" aria-label="Resource type">
+                  <button class="type-pill active" type="button" data-canvas-type="media" aria-selected="true">Media</button>
+                  <button class="type-pill" type="button" data-canvas-type="pdf" aria-selected="false">PDF</button>
+                  <button class="type-pill" type="button" data-canvas-type="link" aria-selected="false">Link</button>
+                  <button class="type-pill" type="button" data-canvas-type="file" aria-selected="false">File</button>
+                  <button class="type-pill" type="button" data-canvas-type="other" aria-selected="false">Other</button>
+                </div>
+
+                <div class="brief-form-grid">
+                  <label class="field-label" for="canvas-item-title">Resource title</label>
+                  <input class="auth-input" id="canvas-item-title" name="itemTitle" type="text" placeholder="Swiss poster references" required>
+
+                  <label class="field-label" for="canvas-item-source">Link, note, or filename</label>
+                  <input class="auth-input" id="canvas-item-source" name="itemSource" type="text" placeholder="Paste a URL, file name, or quick note">
+
+                  <label class="field-label" for="canvas-item-file">Attach file</label>
+                  <input class="file-input" id="canvas-item-file" name="itemFile" type="file">
+
+                  <label class="field-label" for="canvas-item-group">Group</label>
+                  <select class="auth-input" id="canvas-item-group" name="itemGroup"></select>
+                </div>
+
+                <p class="canvas-status" id="canvas-status" aria-live="polite">Add media, PDFs, links, files, or anything else into your own groups.</p>
+                <button class="primary-button small add-brief-button" type="submit">Add to Canvas</button>
+              </form>
+            </section>
+
+            <div class="canvas-stage" id="canvas-stage">
+              <div class="canvas-surface" id="canvas-surface"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
